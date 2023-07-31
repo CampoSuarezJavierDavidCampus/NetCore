@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using System.Reflection;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Persistence;
@@ -18,5 +19,6 @@ public class ShopContext : DbContext
     {
         modelBuilder.Entity<PersonaProducto>().HasKey(r => new{r.IdPersona,r.IdProducto});
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }

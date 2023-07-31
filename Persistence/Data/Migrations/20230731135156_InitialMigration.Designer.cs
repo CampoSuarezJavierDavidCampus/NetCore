@@ -11,7 +11,7 @@ using Persistence;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20230731132006_InitialMigration")]
+    [Migration("20230731135156_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -26,103 +26,122 @@ namespace Persistence.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idMarca");
 
                     b.Property<string>("Descipcion")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("idDescipcion");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Marcas");
+                    b.ToTable("Marca", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Pais", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idPais");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("nombrePais");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Paises");
+                    b.ToTable("Pais", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Persona", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idPersona");
 
                     b.Property<string>("Apellido")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("apellidoPersona");
 
                     b.Property<int>("Edad")
-                        .HasColumnType("int");
+                        .HasMaxLength(4)
+                        .HasColumnType("int")
+                        .HasColumnName("edadPersona");
 
                     b.Property<int>("IdProvincia")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idProv");
 
                     b.Property<int>("IdTipoPersona")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idTipPer");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("ProvinciaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TipoPersonaId")
-                        .HasColumnType("int");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("nombrePersona");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProvinciaId");
+                    b.HasIndex("IdProvincia");
 
-                    b.HasIndex("TipoPersonaId");
+                    b.HasIndex("IdTipoPersona");
 
-                    b.ToTable("Personas");
+                    b.ToTable("Persona", (string)null);
                 });
 
             modelBuilder.Entity("Domain.PersonaProducto", b =>
                 {
                     b.Property<int>("IdPersona")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idPersona");
 
                     b.Property<int>("IdProducto")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PersonaId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProductoId")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idProducto");
 
                     b.HasKey("IdPersona", "IdProducto");
 
-                    b.HasIndex("PersonaId");
+                    b.HasIndex("IdProducto");
 
-                    b.HasIndex("ProductoId");
-
-                    b.ToTable("PersonaProductos");
+                    b.ToTable("ProductoPersona", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Producto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idProducto");
 
                     b.Property<string>("Descipcion")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("DescipcionProducto");
 
-                    b.Property<double?>("IdMarca")
-                        .HasColumnType("double");
-
-                    b.Property<int?>("MarcaId")
-                        .HasColumnType("int");
+                    b.Property<int?>("IdMarca")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("IdMarca");
 
                     b.Property<double?>("Precio")
                         .HasColumnType("double");
@@ -132,78 +151,95 @@ namespace Persistence.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MarcaId");
+                    b.HasIndex("IdMarca");
 
-                    b.ToTable("Productos");
+                    b.ToTable("Producto", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Provincia", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idProvincia");
 
                     b.Property<int>("IdRegion")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idRegion");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("RegionId")
-                        .HasColumnType("int");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("nombreProvincia");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RegionId");
+                    b.HasIndex("IdRegion");
 
-                    b.ToTable("Provincias");
+                    b.ToTable("Provincia", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Region", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idRegion");
 
                     b.Property<int>("IdPais")
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idPais");
 
                     b.Property<string>("Nombre")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("PaisId")
-                        .HasColumnType("int");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("nombreRegion");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("PaisId");
+                    b.HasIndex("IdPais");
 
-                    b.ToTable("Regiones");
+                    b.ToTable("Region", (string)null);
                 });
 
             modelBuilder.Entity("Domain.TipoPersona", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasMaxLength(12)
+                        .HasColumnType("int")
+                        .HasColumnName("idTIpoPersona");
 
                     b.Property<string>("Descipcion")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("desciptionTIpoPersona");
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoPersonas");
+                    b.ToTable("TipoPersona", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Persona", b =>
                 {
                     b.HasOne("Domain.Provincia", "Provincia")
                         .WithMany("Personas")
-                        .HasForeignKey("ProvinciaId");
+                        .HasForeignKey("IdProvincia")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.TipoPersona", "TipoPersona")
                         .WithMany("Personas")
-                        .HasForeignKey("TipoPersonaId");
+                        .HasForeignKey("IdTipoPersona")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Provincia");
 
@@ -214,11 +250,15 @@ namespace Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Persona", "Persona")
                         .WithMany("PersonaProductos")
-                        .HasForeignKey("PersonaId");
+                        .HasForeignKey("IdPersona")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Producto", "Producto")
                         .WithMany("PersonaProductos")
-                        .HasForeignKey("ProductoId");
+                        .HasForeignKey("IdProducto")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Persona");
 
@@ -229,7 +269,9 @@ namespace Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Marca", "Marca")
                         .WithMany("Productos")
-                        .HasForeignKey("MarcaId");
+                        .HasForeignKey("IdMarca")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Marca");
                 });
@@ -238,7 +280,9 @@ namespace Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Region", "Region")
                         .WithMany("Provincias")
-                        .HasForeignKey("RegionId");
+                        .HasForeignKey("IdRegion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Region");
                 });
@@ -247,7 +291,9 @@ namespace Persistence.Data.Migrations
                 {
                     b.HasOne("Domain.Pais", "Pais")
                         .WithMany("Regions")
-                        .HasForeignKey("PaisId");
+                        .HasForeignKey("IdPais")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Pais");
                 });

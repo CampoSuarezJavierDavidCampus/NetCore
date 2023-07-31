@@ -21,7 +21,7 @@ namespace Persistence.Data.Configurations
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
 
-            builder.Property(r => r.Region)
+            builder.Property(r => r.IdRegion)
                 .HasColumnName("idRegion")
                 .IsRequired()
                 .HasMaxLength(12);

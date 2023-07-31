@@ -3,7 +3,7 @@ public class Producto:EntityGenericA{
     public string? Referencia { get; set;}            
     public double? Precio { get; set;}
 
-    public double? IdMarca { get; set;}
+    public int? IdMarca { get; set;}
     public Marca? Marca { get; set; }
 
 
