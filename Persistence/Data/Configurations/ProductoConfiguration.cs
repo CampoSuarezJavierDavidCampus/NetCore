@@ -8,15 +8,22 @@ public class ProductoConfiguration : IEntityTypeConfiguration<Producto>
     public void Configure(EntityTypeBuilder<Producto> builder)
     {
         builder.ToTable("Producto");
+
         builder.Property(p => p.Id)
+            .HasColumnName("idProducto")
             .IsRequired()
-            .HasColumnName("idProducto");
+            .HasMaxLength(12);
+
         builder.Property(p => p.Descipcion)
+            .HasColumnName("DescipcionProducto")
             .IsRequired()
-            .HasColumnName("DescipcionProducto");
-        builder.Property(p => p.IdMarca)
+            .HasColumnType("varchar")
+            .HasMaxLength(50);
+
+        builder.Property(p => p.IdMarca)            
+            .HasColumnName("IdMarca")
             .IsRequired()
-            .HasColumnName("IdMarca");
+            .HasMaxLength(12);;
 
         builder.HasOne(p => p.Marca)
             .WithMany(p => p.Productos)

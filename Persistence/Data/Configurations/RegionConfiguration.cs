@@ -8,13 +8,22 @@ public class RegionConfiguration : IEntityTypeConfiguration<Region>
     public void Configure(EntityTypeBuilder<Region> builder)
     {
         builder.ToTable("Region");
+
         builder.Property(r => r.Id)
-            .HasColumnName("idRegion");
+            .HasColumnName("idRegion")
+            .IsRequired()            
+            .HasMaxLength(12);
+
         builder.Property(r => r.Nombre)
-            .HasColumnName("nombreRegion");
+            .HasColumnName("nombreRegion")
+            .IsRequired()
+            .HasColumnType("varchar")
+            .HasMaxLength(50);
+
         builder.Property(r => r.IdPais)
             .HasColumnName("idPais")
-            .IsRequired();
+            .IsRequired()            
+            .HasMaxLength(12);
         
         builder.HasOne(r => r.Pais)
             .WithMany(r => r.Regions)

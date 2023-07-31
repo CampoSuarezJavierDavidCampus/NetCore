@@ -9,8 +9,13 @@ public class MarcaConfiguration : IEntityTypeConfiguration<Marca>
     {
         builder.ToTable("Marca");
         builder.Property(m => m.Id)
-            .HasColumnName("idMarca");
+            .HasColumnName("idMarca")
+            .HasMaxLength(12);
+
         builder.Property(m => m.Descipcion)
-            .HasColumnName("idDescipcion");
+            .HasColumnName("idDescipcion")
+            .HasColumnType("varchar")
+            .IsRequired()
+            .HasMaxLength(50);
     }
 }

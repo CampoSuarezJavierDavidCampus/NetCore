@@ -8,11 +8,16 @@ public class TipoPersonaConfiguration : IEntityTypeConfiguration<TipoPersona>
     public void Configure(EntityTypeBuilder<TipoPersona> builder)
     {
         builder.ToTable("TipoPersona");
-        builder.Property(tp => tp.Id)
+
+        builder.Property(tp => tp.Id)            
+            .HasColumnName("idTIpoPersona")
+            .IsRequired()            
+            .HasMaxLength(12);
+
+        builder.Property(tp => tp.Descipcion)            
+            .HasColumnName("desciptionTIpoPersona")
             .IsRequired()
-            .HasColumnName("idTIpoPersona");
-        builder.Property(tp => tp.Descipcion)
-            .IsRequired()
-            .HasColumnName("desciptionTIpoPersona");
+            .HasColumnType("varchar")
+            .HasMaxLength(50);
     }
 }

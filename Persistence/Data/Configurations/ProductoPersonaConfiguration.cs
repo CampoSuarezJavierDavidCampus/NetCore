@@ -10,10 +10,14 @@ public class ProductoPersonaConfiguration : IEntityTypeConfiguration<PersonaProd
         builder.ToTable("ProductoPersona");
         builder.Property(pp => pp.IdProducto)
             .HasColumnName("idProducto")
-            .IsRequired();
+            .IsRequired()
+            .HasMaxLength(12);
+
         builder.Property(pp => pp.IdPersona)
             .HasColumnName("idPersona")
-            .IsRequired();
+            .IsRequired()
+            .HasMaxLength(12);
+
         builder.HasOne(pp => pp.Producto)
             .WithMany(p => p.PersonaProductos)
             .HasForeignKey(p => p.IdProducto);

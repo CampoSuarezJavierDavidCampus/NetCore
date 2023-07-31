@@ -8,10 +8,15 @@ public class PaisConfiguration : IEntityTypeConfiguration<Pais>
     public void Configure(EntityTypeBuilder<Pais> builder)
     {
         builder.ToTable("Pais");
+
         builder.Property(m => m.Id)
-            .HasColumnName("idPais");
-        builder.Property(m => m.Nombre)
+            .HasColumnName("idPais")
+            .HasMaxLength(12);
+
+        builder.Property(m => m.Nombre)            
+            .HasColumnName("nombrePais")
+            .HasColumnType("varchar")
             .IsRequired()
-            .HasColumnName("nombrePais");        
+            .HasMaxLength(50);
     }
 }
