@@ -1,0 +1,17 @@
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Persistence.deps.json
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Persistence.runtimeconfig.json
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Persistence.dll
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Persistence.pdb
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Domain.dll
+/home/apolm01-003/Pictures/NetCore/Persistence/bin/Debug/net7.0/Domain.pdb
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.csproj.AssemblyReference.cache
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.GeneratedMSBuildEditorConfig.editorconfig
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfoInputs.cache
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.AssemblyInfo.cs
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.csproj.CoreCompileInputs.cache
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.csproj.CopyComplete
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.dll
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/refint/Persistence.dll
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.pdb
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/Persistence.genruntimeconfig.cache
+/home/apolm01-003/Pictures/NetCore/Persistence/obj/Debug/net7.0/ref/Persistence.dll

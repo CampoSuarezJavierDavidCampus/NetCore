@@ -1,0 +1,12 @@
+/home/apolm01-003/Pictures/NetCore/Domain/bin/Debug/net7.0/Domain.deps.json
+/home/apolm01-003/Pictures/NetCore/Domain/bin/Debug/net7.0/Domain.dll
+/home/apolm01-003/Pictures/NetCore/Domain/bin/Debug/net7.0/Domain.pdb
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.csproj.AssemblyReference.cache
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.AssemblyInfoInputs.cache
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.AssemblyInfo.cs
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.csproj.CoreCompileInputs.cache
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.dll
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/refint/Domain.dll
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/Domain.pdb
+/home/apolm01-003/Pictures/NetCore/Domain/obj/Debug/net7.0/ref/Domain.dll

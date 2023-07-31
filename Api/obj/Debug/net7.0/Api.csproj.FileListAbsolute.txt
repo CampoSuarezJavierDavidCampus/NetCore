@@ -1,0 +1,7 @@
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.csproj.AssemblyReference.cache
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.GeneratedMSBuildEditorConfig.editorconfig
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.AssemblyInfoInputs.cache
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.AssemblyInfo.cs
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.csproj.CoreCompileInputs.cache
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.MvcApplicationPartsAssemblyInfo.cs
+/home/apolm01-003/Pictures/NetCore/Api/obj/Debug/net7.0/Api.MvcApplicationPartsAssemblyInfo.cache
