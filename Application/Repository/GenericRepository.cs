@@ -8,10 +8,7 @@ namespace Aplicacion.Repository;
 public class GenericRepository<T> : IGenericRepo<T> where T : EntityGenericC{
     private readonly ShopContext _context;
 
-    public GenericRepository(ShopContext context)
-    {
-        this._context = context;
-    }
+    public GenericRepository(ShopContext context)=>_context = context;
 
     public virtual void Add(T entity)
     {
