@@ -1,4 +1,4 @@
-namespace Domain;
+namespace Domain.Entity;
 public class Region:EntityGenericB{
     public int IdPais { get; set;} 
     public Pais? Pais { get; set; }

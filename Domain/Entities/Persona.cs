@@ -1,4 +1,4 @@
-namespace Domain;
+namespace Domain.Entity;
 public class Persona:EntityGenericB{
     public string? Apellido { get; set;}    
     public int Edad { get; set;}    

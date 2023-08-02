@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Domain;
+namespace Domain.Entity;
 public class PersonaProducto{
     [Key]
     public int IdPersona { get; set;}

@@ -1,4 +1,4 @@
-namespace Domain;
+namespace Domain.Entity;
 public class Producto:EntityGenericA{ 
     public string? Referencia { get; set;}            
     public double? Precio { get; set;}
