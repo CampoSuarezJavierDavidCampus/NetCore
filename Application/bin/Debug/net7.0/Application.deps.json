@@ -9,6 +9,7 @@
       "Application/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Persistence": "1.0.0"
         },
         "runtime": {

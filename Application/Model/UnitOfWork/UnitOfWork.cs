@@ -10,5 +10,14 @@ public class UnitOfWork : IUnitOfWork
 
     public UnitOfWork(ShopContext context)=>_context = context;
 
-    public IPais Paises => _pais??=new(_context);
+    //public IPais Paises => _pais??=new(_context);
+    public IPais Paises{
+        get{ 
+            if (_pais is null)
+            {
+                _pais = new(_context);
+            }
+            return _pais;
+        }
+    }
 }

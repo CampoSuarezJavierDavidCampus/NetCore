@@ -17,14 +17,14 @@
           "/home/apolm01-003/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net7"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
-            "targetAlias": "net7.0",
+            "targetAlias": "net7",
             "projectReferences": {
               "/home/apolm01-003/Pictures/NetCore/Application/Application.csproj": {
                 "projectPath": "/home/apolm01-003/Pictures/NetCore/Application/Application.csproj"
@@ -40,7 +40,7 @@
       },
       "frameworks": {
         "net7.0": {
-          "targetAlias": "net7.0",
+          "targetAlias": "net7",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -60,9 +60,9 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "Swagger": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
