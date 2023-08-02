@@ -6,7 +6,7 @@ using Persistence;
 
 namespace Aplicacion.Repository;
 public class GenericRepository<T> : IGenericRepo<T> where T : EntityGenericC{
-    private readonly ShopContext _context;
+    protected readonly ShopContext _context;
 
     public GenericRepository(ShopContext context)=>_context = context;
 
